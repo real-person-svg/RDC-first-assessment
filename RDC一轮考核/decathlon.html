@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>decathion</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- 头部导航栏部分 -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="img/index/a_logo.png" alt="Decathlon Logo" class="logo">
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">运动分类</a></li>
+          <li><a href="#">生态设计</a></li>
+          <li><a href="#">特惠专区</a></li>
+          <li><a href="#">品牌文化</a></li>
+          <li><a href="#">会员权益</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" placeholder="搜索" class="search-bar">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      </div>
+      <div class="header-actions">
+        <a href="#" class="store-icon">
+          <i class="fa-solid fa-store"></i> 门店
+        </a>
+        <a href="#" class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i> 购物车
+        </a>
+        <a href="#" class="login-icon">
+          <i class="fa-solid fa-user"></i> 加入/登录
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 变暗部分 -->
+  <div class="dark-overlay"></div>
+
+  <!-- 登录部分 -->
+  <section class="login-section">
+    <h2>登录</h2>
+    <form action="#" method="post">
+      <label for="phone">手机号 *</label>
+      <input type="text" id="phone" name="phone" placeholder="请填写国内手机号" required>
+      <label for="password">密码 *</label>
+      <div class="password-container">
+        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+      </div>
+      <a href="#" class="forgot-password">
+        <i class="fa-solid fa-question"></i> 忘记密码
+      </a>
+      <button type="submit">登录</button>
+    </form>
+    <a href="#" class="register-link">没有账号，去注册</a>
+    <div class="close-button">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  </section>
+
+  <!-- 搜索部分 -->
+  <section class="search-section">
+    <div class="search-main">
+      <div class="search-bar-container">
+        <div class="top-search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <input type="text" placeholder="搜索商品或商品号">
+        <a href="#" class="cancel-button">取消</a>
+      </div>
+      <div class="popular-search-container">
+        <h3>热门搜索</h3>
+        <div class="tag-container">
+          <span class="tag">Spor...</span>
+          <span class="tag">自行车</span>
+          <span class="tag">极简过冬...</span>
+          <span class="tag">见人不如...</span>
+          <span class="tag">抓绒</span>
+          <span class="tag">户外露营</span>
+          <span class="tag">冲锋衣</span>
+          <span class="tag">摇粒绒</span>
+          <span class="tag">手套</span>
+          <span class="tag">背包客好物</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 首页部分 -->
+  <div class="index">
+    <!-- 轮播图部分 -->
+    <section class="banner">
+      <div class="banner-container">
+        <div class="banner-content">
+          <a href="#" class="btn">立即查看</a>
+        </div>
+        <div class="slider-controls">
+          <a href="#" class="slider-prev banner-prev">&lt;</a>
+          <a href="#" class="slider-next banner-next">&gt;</a>
+        </div>
+      </div>
+    </section>
+    <!-- 乐享运动部分 -->
+    <section class="sports-section">
+      <div class="sports-main">
+        <h2 class="section-title">乐享运动80 +</h2>
+        <div class="sports-container">
+          <div class="sport-item">
+            <img src="img/index/part20_1.png" alt="登山/徒步穿越">
+            <p>登山/徒步穿越</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_2.png" alt="越野跑">
+            <p>越野跑</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_3.png" alt="跑步">
+            <p>跑步</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_4.png" alt="健身">
+            <p>健身</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_5.png" alt="自行车">
+            <p>自行车</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_6.png" alt="儿童综合运动">
+            <p>儿童综合运动</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_7.png" alt="基础健身/普拉提">
+            <p>基础健身/普拉提</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_8.png" alt="羽毛球">
+            <p>羽毛球</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_9.png" alt="游泳">
+            <p>游泳</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_10.png" alt="儿童自行车">
+            <p>儿童自行车</p>
+          </div>
+          <div class="sport-item">
+            <img src="img/index/part20_11.png" alt="足球">
+            <p>足球</p>
+          </div>
+          <div class="check-all-sport-item">
+            <p class="view-all-link">查看所有运动</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 关于迪卡侬部分 -->
+    <section class="decathlon-about">
+      <div class="about-main">
+        <h2 class="section-title">关于迪卡侬</h2>
+        <div class="about-container">
+          <div class="about-item">
+            <img src="img/index/part31.png" alt="31">
+          </div>
+          <div class="about-item">
+            <img src="img/index/part32.png" alt="32">
+          </div>
+          <div class="about-item">
+            <img src="img/index/part33.png" alt="33">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 当季品类部分 -->
+    <section class="current-season">
+      <div class="current-main">
+        <div class="current-section-header">
+          <h2 class="current-section-title">当季品类</h2>
+          <nav class="current-category-nav">
+            <a href="#">青少年自行车</a>
+            <a href="#">通勤鞋</a>
+            <a href="#">冲锋衣</a>
+            <a href="#">户外鞋袜</a>
+            <a href="#">健身装备</a>
+          </nav>
+        </div>
+        <div class="current-banner">
+          <img src="img/index/part41.jpg" alt="青少年骑行" class="current-banner-img">
+          <div class="current-banner-text">
+            <h3>风驰少年 一往无前</h3>
+            <a href="#" class="current-btn">查看更多</a>
+          </div>
+        </div>
+        <div class="product-slider">
+          <a href="#" class="current-slider-prev">&lt;</a>
+          <div class="slider-container">
+            <div class="current-item">
+              <img src="img/index/part41_1.jpg" alt="BTWIN 26寸 EXPL 900系列自行车" class="product-img">
+              <p class="product-name">BTWIN 26寸 EXPL 900系列自行车 黑...</p>
+              <p class="product-price">¥1999.9</p>
+            </div>
+            <div class="current-item">
+              <img src="img/index/part41_2.jpg" alt="BTWIN 26寸混合路面自行车 Hybrid 50..." class="product-img">
+              <p class="product-name">BTWIN 26寸混合路面自行车 Hybrid 50...</p>
+              <p class="product-price">¥1499.9</p>
+            </div>
+            <div class="current-item">
+              <img src="img/index/part41_3.jpg" alt="BTWIN 24寸儿童山地车 EXPL 900 蓝..." class="product-img">
+              <p class="product-name">BTWIN 24寸儿童山地车 EXPL 900 蓝...</p>
+              <p class="product-price">¥1899.9</p>
+            </div>
+            <div class="current-item">
+              <img src="img/index/part41_4.jpg" alt="BTWIN 24寸混合路面自行车 Hybrid 500..." class="product-img">
+              <p class="product-name">BTWIN 24寸混合路面自行车 Hybrid 500...</p>
+              <p class="product-price">¥1399.9</p>
+            </div>
+            <div class="current-item">
+              <img src="img/index/part41_5.jpg" alt="BTWIN 20寸山地车EXPL900 系骑士-柠檬风..." class="product-img">
+              <p class="product-name">BTWIN 20寸山地车EXPL900 系骑士-柠檬风...</p>
+              <p class="product-price">¥1699.9</p>
+            </div>
+            <div class="current-item">
+              <img src="img/index/part41_6.jpg" alt="BTWIN 20 寸混合路面自行车 Hybrid 50..." class="product-img">
+              <p class="product-name">BTWIN 20 寸混合路面自行车 Hybrid 50...</p>
+              <p class="product-price">¥1299.9</p>
+            </div>
+          </div>
+          <a href="#" class="current-slider-next">&gt;</a>
+        </div>
+      </div>
+    </section>
+    <!-- 侬说搭配部分 -->
+    <section class="match-section">
+      <div class="match-main">
+        <div class="match-showcase">
+          <div class="match-header">
+            <h2 class="match-title">依说搭配</h2>
+            <nav class="match-nav">
+              <a href="#">游泳</a>
+              <a href="#">瑜伽</a>
+              <a href="#">轮滑</a>
+            </nav>
+            <div class="match-text">
+              <h3>春日泳动 唤醒活力</h3>
+            </div>
+          </div>
+          <div class="match-banner">
+            <img src="img/index/part51.jpg" alt="游泳搭配展示" class="match-banner-img">
+          </div>
+        </div>
+        <div class="match-product-slider">
+          <a href="#" class="match-slider-prev">&lt;</a>
+          <div class="slider-container">
+            <div class="product-item">
+              <img src="img/index/part51_1.jpg" alt="NABAIJI 女士连体裙式带拉链泳衣UNA b..." class="product-img">
+              <p class="product-name">NABAIJI 女士连体裙式带拉链泳衣UNA b...</p>
+              <p class="product-price">¥199.9</p>
+            </div>
+            <div class="product-item">
+              <img src="img/index/part51_2.jpg" alt="NABAIJI 男式平角泳裤100 Black" class="product-img">
+              <p class="product-name">NABAIJI 男式平角泳裤100 Black</p>
+              <p class="product-price">¥89.9</p>
+            </div>
+            <div class="product-item">
+              <img src="img/index/part51_3.jpg" alt="NABAIJI 游泳眼镜CN BFIT SMOK..." class="product-img">
+              <p class="product-name">NABAIJI 游泳眼镜CN BFIT SMOK...</p>
+              <p class="product-price">¥159.9</p>
+            </div>
+          </div>
+          <a href="#" class="match-slider-next">&gt;</a>
+        </div>
+      </div>
+    </section>
+    <!-- 侬粉热搜部分 -->
+    <section class="hot-search">
+      <div class="hot-main">
+        <h2>侬粉热搜</h2>
+        <div class="search-tiems-container">
+          <div class="search-item"><img src="img/index/hot.png" alt="hot">Spor...</div>
+          <div class="search-item">自行车</div>
+          <div class="search-item">极简过冬...</div>
+          <div class="search-item">见人不如...</div>
+          <div class="search-item">抓绒</div>
+          <div class="search-item">户外露营</div>
+          <div class="search-item"><img src="img/index/hot.png" alt="hot">冲锋衣</div>
+          <div class="search-item">摇粒绒</div>
+          <div class="search-item">手套</div>
+          <div class="search-item">背包客好物</div>
+        </div>
+      </div>
+    </section>
+    <!-- 迪家创新部分 -->
+    <section class="create-product-showcase">
+      <div class="create-main">
+        <h2>迪家创新</h2>
+        <div class="create-product-slider">
+          <div class="create-product-slide">
+            <img src="img/index/part61.jpg" alt="皮划艇">
+          </div>
+          <div class="create-product-slide">
+            <img src="img/index/part62.jpg" alt="钓鱼船">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 折扣专区部分 -->
+    <section class="discount-section">
+      <div class="discount-banner">
+        <h2>折扣专区</h2>
+        <div class="discount-image-container">
+          <img src="img/index/part70.jpg" alt="折扣图片">
+        </div>
+      </div>
+    </section>
+    <!-- 服务部分 -->
+    <section class="service-section">
+      <div class="service-main">
+        <div class="service-item">
+          <i class="fa-solid fa-truck"></i>
+          <h3><span>99</span>元免运费</h3>
+          <a href="#" class="detail-link">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h3><span>2</span>小时自提</h3>
+          <a href="#" class="detail-link">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-wallet"></i>
+          <h3><span>燃值</span>好福利</h3>
+          <a href="#" class="detail-link">会员专享 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-wrench"></i>
+          <h3><span>工作室</span>维保&定制</h3>
+          <a href="#" class="detail-link">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-rotate"></i>
+          <h3><span>退换货</span>便捷有保障</h3>
+          <a href="#" class="detail-link">查看详情 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- 热卖推荐部分 -->
+    <section class="hot-sale-recommendation">
+      <div class="recommendation-main">
+        <h2>热卖推荐</h2>
+        <div class="product-container">
+          <div class="product-item">
+            <img src="img/index/part80_1.jpg" alt="WEDZE 男士滑雪打底内衣 上衣 BL 500">
+            <p class="product-name">WEDZE 男士滑雪打底内衣 上衣 BL 500</p>
+            <p class="product-price">¥99.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_2.jpg" alt="WEDZE 男士滑雪打底裤BL 500">
+            <p class="product-name">WEDZE 男士滑雪打底裤BL 500</p>
+            <p class="product-price">¥99.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_3.jpg" alt="PERFLY 羽毛球100 x 12">
+            <p class="product-name">PERFLY 羽毛球100 x 12</p>
+            <p class="product-price">¥79.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_4.jpg" alt="KIPSTA KIPSTA成人中阶长款羽绒服CN-石墨...">
+            <p class="product-name">KIPSTA KIPSTA成人中阶长款羽绒服CN-石墨...</p>
+            <p class="product-price">
+              <span class="discount-price">¥549.9</span>
+              <span class="original-price">¥799.90</span>
+              <span class="discount">6.9折</span>
+            </p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_5.jpg" alt="WEDZE 成人滑雪手套 GL100">
+            <p class="product-name">WEDZE 成人滑雪手套 GL100</p>
+            <p class="product-price">
+              <span class="discount-price">¥79.9</span>
+              <span class="original-price">¥99.90</span>
+              <span class="discount">8折</span>
+            </p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_6.jpg" alt="QUECHUA 男士山地徒步鞋 MH100 - 灰色">
+            <p class="product-name">QUECHUA 男士山地徒步鞋 MH100 - 灰色</p>
+            <p class="product-price">¥299.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_7.jpg" alt="DOMYOS 男士二合一摇粒绒长裤 - 黑色">
+            <p class="product-name">DOMYOS 男士二合一摇粒绒长裤 - 黑色</p>
+            <p class="product-price">¥169.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_8.jpg" alt="FORCLAZ NH100 男士冬季徒步三合一防水保暖夹...">
+            <p class="product-name">FORCLAZ NH100 男士冬季徒步三合一防水保暖夹...</p>
+            <p class="product-price">¥449.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_9.jpg" alt="QUECHUA 男士山地徒步防水鞋 MH100 - 灰色">
+            <p class="product-name">QUECHUA 男士山地徒步防水鞋 MH100 - 灰色</p>
+            <p class="product-price">¥349.9</p>
+          </div>
+          <div class="product-item">
+            <img src="img/index/part80_10.jpg" alt="KALENJI 男士缓震短距抓地力跑鞋 ACTIVE G...">
+            <p class="product-name">KALENJI 男士缓震短距抓地力跑鞋 ACTIVE G...</p>
+            <p class="product-price">¥199.9</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 产品召回部分 -->
+    <section class="product-recall">
+      <div class="recall-main">
+        <h2>产品召回</h2>
+        <p class="recall-info">
+          经团队内部评估，我们发现该款公路自行车EDR CF RIVAL AXS V2产品（“该产品”）轮胎结构原因导致和轮圈的固定力不足，可能发生脱胎风险，在骑行过程中可能因脱胎导致摔倒受...
+          <a href="#" class="read-more">></a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- 会员部分 -->
+  <div class="menber">
+    <!-- 会员招募部分 -->
+    <section class="member-recruitment">
+      <div class="member-banner">
+        <div class="member-sidebar">
+          <p>加入迪卡侬会员</p>
+        </div>
+        <div class="member-content">
+          <h1>玩转迪卡侬会员</h1>
+          <h2>尝试你的更多运动可能</h2>
+          <p>加入迪卡侬会员俱乐部，解锁会员独家礼遇！在迪卡侬会员俱乐部，我们希望能够和会员一起享受自己喜欢的运动。</p>
+          <p>与迪卡侬互动，赚取燃值，享受服务，参与专享活动，助你离快乐更进一步。</p>
+          <a href="#" class="member-button">
+            <span class="button-text">新会员超多权益</span>
+            <span class="button-action">加入我们</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- 会员福利部分 -->
+    <section class="benefits-section">
+      <div class="benefits-main">
+        <div class="benefits-banner-container">
+          <div class="benefits-banner" style="background-image: url('img/member/part1_1.png');">
+            <div class="benefits-banner-text">
+              <h2>会员燃值福利</h2>
+              <p>独家礼品/电子礼券/幸运大奖/限量活动等应有尽有</p>
+              <img src="img/member/erweima2.png" alt="benefit_1">
+            </div>
+          </div>
+          <div class="benefits-banner" style="background-image: url('img/member/part1_2.png');">
+            <div class="benefits-banner-text">
+              <h2>会员服务</h2>
+              <p>超一流的售后保障和专业的装备维保升级服务</p>
+              <div class="benefits-workplace">工作室</div>
+            </div>
+          </div>
+          <div class="benefits-banner" style="background-image: url('img/member/part1_3.png');">
+            <div class="benefits-banner-text">
+              <h2>社群福利</h2>
+              <p>专业运动知识/运动同好/社群活动，等你加入</p>
+              <img src="img/member/erweima3.png" alt="benefit_2">
+            </div>
+          </div>
+        </div>
+        <div class="benefits-cta-container">
+          <a href="#" class="benefits-cta-button">立即加入</a>
+          <a href="#" class="benefits-info-button">迪卡侬会员须知</a>
+        </div>
+      </div>
+    </section>
+    <!-- 燃值专区部分 -->
+    <section class="fire-worth-section">
+      <div class="fire-worth-main">
+        <h2>燃值专区</h2>
+        <div class="fire-worth-container">
+          <div class="fire-worth-item">
+            <i class="fa-solid fa-gift"></i>
+            <h3>燃值兑礼</h3>
+            <p>选择你的燃值好物</p>
+          </div>
+          <div class="fire-worth-item">
+            <i class="fa-solid fa-ticket"></i>
+            <h3>燃值兑券</h3>
+            <p>总有礼券是你想要</p>
+          </div>
+          <div class="fire-worth-item">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>幸运抽奖</h3>
+            <p>幸运一下，今日大奖得主就是你</p>
+          </div>
+          <div class="fire-worth-item">
+            <i class="fa-solid fa-wrench"></i>
+            <h3>装备维保</h3>
+            <p>心爱装备极致守护</p>
+          </div>
+          <div class="fire-worth-item">
+            <i class="fa-solid fa-person-running"></i>
+            <h3>运动趣练</h3>
+            <p>体验运动无限可能</p>
+          </div>
+        </div>
+        <p class="fire-worth-footer">更多会员权益不断升级！</p>
+      </div>
+    </section>
+    <!-- 燃值攻略部分 -->
+    <section class="strategy-section">
+      <div class="strategy-main">
+        <h2>燃值攻略</h2>
+        <p class="subtitle">探索更多燃值新玩法，迪卡侬燃值助力运动</p>
+        <div class="strategy-container">
+          <div class="strategy-image">
+            <img src="img/member/footer.png" alt="运动场景">
+          </div>
+          <div class="strategy-text">
+            <h3>关于迪卡侬会员燃值</h3>
+            <ol>
+              <li>
+                <h4>燃值是什么？</h4>
+                <p>燃值是迪卡侬会员俱乐部为在迪卡侬消费，互动的会员准备的会员权益，与每个会员的账号相关联，燃值很有用，要保护好自己的账号噢！</p>
+              </li>
+              <li>
+                <h4>如何使用燃值？</h4>
+                <p>燃值可用于在中国大陆地区兑换产品/电子礼券/指定服务/指定活动抽奖机会，直接前往微信小程序“迪卡侬会员小程序”使用你的燃值吧！</p>
+              </li>
+              <li>
+                <h4>燃值有效期</h4>
+                <p>当年获得的燃值将在次年年底过期(例如2023年获得的燃值将在2024年12月31日24:00过期)</p>
+              </li>
+              <li>
+                <h4>怎么获得燃值</h4>
+                <p>会员积极和迪卡侬互动，在迪卡侬消费，评价自己的订单都能获得燃值噢，还有更多隐藏攻略，等你来探索！</p>
+              </li>
+              <li>
+                <h4>关注迪卡侬获得更多信息</h4>
+                <p>搜索微信公众号“Decathlon迪卡侬”并关注，搜索微信小程序“迪卡侬会员俱乐部”发现更多燃值相关活动，快来参与吧！</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 底部部分 -->
+  <section class="footer-section">
+    <div class="footer-main">
+      <div class="footer-container">
+        <div class="footer-logo-container">
+          <img src="img/footer-image.png" alt="迪卡侬logo">
+        </div>
+        <div class="link-columns">
+          <div class="footer-column">
+            <h4>关于迪卡侬</h4>
+            <ul>
+              <li><a href="#">品牌故事</a></li>
+              <li><a href="#">工作机遇</a></li>
+              <li><a href="#">迪卡侬可持续发展</a></li>
+              <li><a href="#">成为合作伙伴</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>我们的服务</h4>
+            <ul>
+              <li><a href="#">退换货政策</a></li>
+              <li><a href="#">定制/维修/保养</a></li>
+              <li><a href="#">会员权益</a></li>
+              <li><a href="#">团购</a></li>
+              <li><a href="#">礼品卡</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>帮助</h4>
+            <ul>
+              <li><a href="#">帮助中心</a></li>
+              <li><span>客服电话 4009-109-109</span></li>
+              <li><span>周一至周日 09:00 ~ 18:00</span></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>合法</h4>
+            <ul>
+              <li><a href="#">营业执照</a></li>
+              <li><a href="#">隐私政策</a></li>
+              <li><a href="#">会员须知</a></li>
+              <li><a href="#">官网购物须知</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="qr-social-container">
+          <div class="qr-code-container">
+            <div class="qr-code">
+              <img src="img/index/erweima.jpg" alt="迪卡侬微信公众号二维码">
+              <p>迪卡侬微信公众号</p>
+            </div>
+            <div class="qr-code">
+              <img src="img/index/erweima_footer.png" alt="迪卡侬微信小程序二维码">
+              <p>迪卡侬微信小程序</p>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#"><img src="img/xiaohongshu.png" alt="小红书"></a>
+            <a href="#"><img src="img/weibo.png" alt="微博"></a>
+            <a href="#"><img src="img/douying.png" alt="抖音"></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-container">
+        <p>Copyright 2003-2025，迪卡侬集团及其附属公司</p>
+        <p>沪ICP备16000315号 沪公网安备31011502001899号</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

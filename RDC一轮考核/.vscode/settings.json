@@ -1,0 +1,7 @@
+{
+  "marscode.codeCompletionPro": {
+    "enableCodeCompletionPro": true
+  },
+  "marscode.enableInlineCommand": false,
+  "liveServer.settings.port": 5501
+}
