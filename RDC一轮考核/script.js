@@ -4,6 +4,37 @@ const memberLink = document.querySelector('.nav-links li:last-child a');
 const indexSection = document.querySelector('.index');
 const memberSection = document.querySelector('.menber');
 
+// ... existing code ...
+
+// 获取 nav-links 中的所有 li 元素和 showitem 元素
+const navLinks = document.querySelectorAll('.nav-links li');
+const showItembox = document.querySelector('.showitem');
+
+// 添加过渡效果，设置宽度和位置变化的过渡时间为 0.3 秒
+showItembox.style.transition = 'all 0.3s ease';
+
+// 为每个 li 元素添加鼠标进入和鼠标离开事件监听器
+navLinks.forEach((link) => {
+  link.addEventListener('mouseenter', () => {
+    // 计算当前 li 元素的位置和宽度
+    const rect = link.getBoundingClientRect();
+    const navRect = document.querySelector('.header-nav').getBoundingClientRect();
+    const left = rect.left - navRect.left;
+    const width = rect.width;
+
+    // 设置 showitem 的位置
+    showItembox.style.transform = `translateX(${left}px)`;
+    // 显示 showitem
+    showItembox.style.visibility = 'visible';
+  });
+  link.addEventListener('mouseleave', () => {
+    // 恢复 showitem 的初始状态
+    showItembox.style.visibility = 'hidden';
+  });
+});
+
+// ... existing code ...
+
 // 初始化状态
 memberSection.style.display = 'none';
 
@@ -12,6 +43,10 @@ logo.addEventListener('click', function (e) {
   e.preventDefault();
   indexSection.style.display = 'block';
   memberSection.style.display = 'none';
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 
 // 点击会员权益事件
@@ -19,6 +54,10 @@ memberLink.addEventListener('click', function (e) {
   e.preventDefault();
   indexSection.style.display = 'none';
   memberSection.style.display = 'block';
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 
 // 获取相关元素
@@ -73,11 +112,20 @@ const backgroundImages = [
 const bannerContainer = document.querySelector('.banner-container');
 const bannerPrev = document.querySelector('.banner-prev');
 const bannerNext = document.querySelector('.banner-next');
+const showHighlights = document.querySelectorAll('.show-highlight');
 let currentIndex = 0;
 
 // 初始化轮播图
 function updateBanner() {
   bannerContainer.style.backgroundImage = `url(${backgroundImages[currentIndex]})`;
+  showHighlights[0].classList.add('active');
+  showHighlights.forEach((light, index) => {
+    if (index === currentIndex) {
+      light.classList.add('active');
+    } else {
+      light.classList.remove('active');
+    }
+  })
 }
 
 // 上一张
@@ -91,6 +139,13 @@ bannerNext.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % backgroundImages.length;
   updateBanner();
 });
+
+showHighlights.forEach((light, index) => {
+  light.addEventListener('click', () => {
+    currentIndex = index;
+    updateBanner();
+  });
+})
 
 // 自动轮播
 autoPlayInterval = setInterval(() => {
@@ -111,7 +166,6 @@ bannerContainer.addEventListener('mouseleave', () => {
   }, 3000);
 });
 
-
 // 获取相关元素
 const sliderContainer = document.querySelector('.slider-container');
 const currentSliderPrev = document.querySelector('.current-slider-prev');
@@ -119,34 +173,10 @@ const currentSliderNext = document.querySelector('.current-slider-next');
 const currentItems = document.querySelectorAll('.current-item');
 const itemWidth = currentItems[0].offsetWidth;
 
-currentItems.forEach((item) => {
-  item.addEventListener('mouseenter', () => {
-    // 获取当前元素已有的 transform 样式
-    const currentTransform = item.style.transform;
-    // 如果已有水平平移，在其基础上添加垂直平移
-    if (currentTransform.includes('translateX')) {
-      item.style.transform = currentTransform + ' translateY(-10px)';
-    } else {
-      item.style.transform = 'translateY(-10px)';
-    }
-  });
-  item.addEventListener('mouseleave', () => {
-    const currentTransform = item.style.transform;
-    // 移除垂直平移，保留水平平移
-    if (currentTransform.includes('translateY')) {
-      item.style.transform = currentTransform.replace(' translateY(-10px)', '');
-    } else {
-      item.style.transform = 'translateY(0)';
-    }
-  });
-});
-
-
-
 function showItem(theway) {
   const translateX = -(theway * itemWidth);
   currentItems.forEach((item) => {
-    item.style.transform = `translateX(${translateX}px)`;
+    item.style.transform = `translateX(${translateX - 10}px)`;
   });
 }
 
@@ -173,3 +203,22 @@ currentSliderNext.addEventListener('click', (e) => {
 // 初始化
 showItem(0);
 
+const backToTop = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 900) {
+    backToTop.style.visibility = 'visible';
+    backToTop.style.transform = 'translateY(-10px)';
+  } else {
+    backToTop.style.visibility = 'hidden';
+    backToTop.style.transform = 'translateY(0)';
+  }
+})
+
+backToTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

@@ -12,26 +12,31 @@
 <body>
   <!-- 头部导航栏部分 -->
   <header>
-    <div class="header-container">
+    <div class="header-left-container">
       <div class="logo-container">
         <img src="img/index/a_logo.png" alt="Decathlon Logo" class="logo">
       </div>
-      <nav>
+      <nav class="header-nav">
         <ul class="nav-links">
           <li><a href="#">运动分类</a></li>
           <li><a href="#">生态设计</a></li>
           <li><a href="#">特惠专区</a></li>
           <li><a href="#">品牌文化</a></li>
-          <li><a href="#">会员权益</a></li>
+          <li><a href="#member">会员权益</a></li>
         </ul>
+        <div class="showbar">
+          <div class="showitem"></div>
+        </div>
       </nav>
+    </div>
+    <div class="header-right-container">
       <div class="search-container">
-        <input type="text" placeholder="搜索" class="search-bar">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="搜索" class="search-bar">
       </div>
       <div class="header-actions">
         <a href="#" class="store-icon">
-          <i class="fa-solid fa-store"></i> 门店
+          <i class="fa-solid fa-store"></i>门店
         </a>
         <a href="#" class="cart-icon">
           <i class="fa-solid fa-cart-shopping"></i> 购物车
@@ -106,6 +111,14 @@
         <div class="slider-controls">
           <a href="#" class="slider-prev banner-prev">&lt;</a>
           <a href="#" class="slider-next banner-next">&gt;</a>
+        </div>
+        <div class="slider-show">
+          <div class="show-highlight"></div>
+          <div class="show-highlight"></div>
+          <div class="show-highlight"></div>
+          <div class="show-highlight"></div>
+          <div class="show-highlight"></div>
+          <div class="show-highlight"></div>
         </div>
       </div>
     </section>
@@ -208,31 +221,37 @@
               <img src="img/index/part41_1.jpg" alt="BTWIN 26寸 EXPL 900系列自行车" class="product-img">
               <p class="product-name">BTWIN 26寸 EXPL 900系列自行车 黑...</p>
               <p class="product-price">¥1999.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="current-item">
               <img src="img/index/part41_2.jpg" alt="BTWIN 26寸混合路面自行车 Hybrid 50..." class="product-img">
               <p class="product-name">BTWIN 26寸混合路面自行车 Hybrid 50...</p>
               <p class="product-price">¥1499.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="current-item">
               <img src="img/index/part41_3.jpg" alt="BTWIN 24寸儿童山地车 EXPL 900 蓝..." class="product-img">
               <p class="product-name">BTWIN 24寸儿童山地车 EXPL 900 蓝...</p>
               <p class="product-price">¥1899.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="current-item">
               <img src="img/index/part41_4.jpg" alt="BTWIN 24寸混合路面自行车 Hybrid 500..." class="product-img">
               <p class="product-name">BTWIN 24寸混合路面自行车 Hybrid 500...</p>
               <p class="product-price">¥1399.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="current-item">
               <img src="img/index/part41_5.jpg" alt="BTWIN 20寸山地车EXPL900 系骑士-柠檬风..." class="product-img">
               <p class="product-name">BTWIN 20寸山地车EXPL900 系骑士-柠檬风...</p>
               <p class="product-price">¥1699.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="current-item">
               <img src="img/index/part41_6.jpg" alt="BTWIN 20 寸混合路面自行车 Hybrid 50..." class="product-img">
               <p class="product-name">BTWIN 20 寸混合路面自行车 Hybrid 50...</p>
               <p class="product-price">¥1299.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
           </div>
           <a href="#" class="current-slider-next">&gt;</a>
@@ -265,16 +284,19 @@
               <img src="img/index/part51_1.jpg" alt="NABAIJI 女士连体裙式带拉链泳衣UNA b..." class="product-img">
               <p class="product-name">NABAIJI 女士连体裙式带拉链泳衣UNA b...</p>
               <p class="product-price">¥199.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="product-item">
               <img src="img/index/part51_2.jpg" alt="NABAIJI 男式平角泳裤100 Black" class="product-img">
               <p class="product-name">NABAIJI 男式平角泳裤100 Black</p>
               <p class="product-price">¥89.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
             <div class="product-item">
               <img src="img/index/part51_3.jpg" alt="NABAIJI 游泳眼镜CN BFIT SMOK..." class="product-img">
               <p class="product-name">NABAIJI 游泳眼镜CN BFIT SMOK...</p>
               <p class="product-price">¥159.9</p>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </div>
           </div>
           <a href="#" class="match-slider-next">&gt;</a>
@@ -356,64 +378,74 @@
     <section class="hot-sale-recommendation">
       <div class="recommendation-main">
         <h2>热卖推荐</h2>
-        <div class="product-container">
-          <div class="product-item">
+        <div class="sale-product-container">
+          <div class="sale-product-item">
             <img src="img/index/part80_1.jpg" alt="WEDZE 男士滑雪打底内衣 上衣 BL 500">
             <p class="product-name">WEDZE 男士滑雪打底内衣 上衣 BL 500</p>
             <p class="product-price">¥99.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_2.jpg" alt="WEDZE 男士滑雪打底裤BL 500">
             <p class="product-name">WEDZE 男士滑雪打底裤BL 500</p>
             <p class="product-price">¥99.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_3.jpg" alt="PERFLY 羽毛球100 x 12">
             <p class="product-name">PERFLY 羽毛球100 x 12</p>
             <p class="product-price">¥79.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_4.jpg" alt="KIPSTA KIPSTA成人中阶长款羽绒服CN-石墨...">
             <p class="product-name">KIPSTA KIPSTA成人中阶长款羽绒服CN-石墨...</p>
             <p class="product-price">
               <span class="discount-price">¥549.9</span>
               <span class="original-price">¥799.90</span>
               <span class="discount">6.9折</span>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </p>
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_5.jpg" alt="WEDZE 成人滑雪手套 GL100">
             <p class="product-name">WEDZE 成人滑雪手套 GL100</p>
             <p class="product-price">
               <span class="discount-price">¥79.9</span>
               <span class="original-price">¥99.90</span>
               <span class="discount">8折</span>
+              <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
             </p>
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_6.jpg" alt="QUECHUA 男士山地徒步鞋 MH100 - 灰色">
             <p class="product-name">QUECHUA 男士山地徒步鞋 MH100 - 灰色</p>
             <p class="product-price">¥299.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_7.jpg" alt="DOMYOS 男士二合一摇粒绒长裤 - 黑色">
             <p class="product-name">DOMYOS 男士二合一摇粒绒长裤 - 黑色</p>
             <p class="product-price">¥169.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_8.jpg" alt="FORCLAZ NH100 男士冬季徒步三合一防水保暖夹...">
             <p class="product-name">FORCLAZ NH100 男士冬季徒步三合一防水保暖夹...</p>
             <p class="product-price">¥449.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_9.jpg" alt="QUECHUA 男士山地徒步防水鞋 MH100 - 灰色">
             <p class="product-name">QUECHUA 男士山地徒步防水鞋 MH100 - 灰色</p>
             <p class="product-price">¥349.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
-          <div class="product-item">
+          <div class="sale-product-item">
             <img src="img/index/part80_10.jpg" alt="KALENJI 男士缓震短距抓地力跑鞋 ACTIVE G...">
             <p class="product-name">KALENJI 男士缓震短距抓地力跑鞋 ACTIVE G...</p>
             <p class="product-price">¥199.9</p>
+            <img src="img/shopping-car.png" alt="加入购物车" class="shopping-car">
           </div>
         </div>
       </div>
@@ -431,7 +463,7 @@
   </div>
 
   <!-- 会员部分 -->
-  <div class="menber">
+  <div class="menber" id="member">
     <!-- 会员招募部分 -->
     <section class="member-recruitment">
       <div class="member-banner">
@@ -529,33 +561,51 @@
             <h3>关于迪卡侬会员燃值</h3>
             <ol>
               <li>
-                <h4>燃值是什么？</h4>
-                <p>燃值是迪卡侬会员俱乐部为在迪卡侬消费，互动的会员准备的会员权益，与每个会员的账号相关联，燃值很有用，要保护好自己的账号噢！</p>
+                <div class="strategy-left" style="margin-right: 29px;">1</div>
+                <div class="strategy-right">
+                  <h4>燃值是什么？</h4>
+                  <p>燃值是迪卡侬会员俱乐部为在迪卡侬消费，互动的会员准备的会员权益，与每个会员的账号相关联，燃值很有用，要保护好自己的账号噢！</p>
+                </div>
               </li>
               <li>
-                <h4>如何使用燃值？</h4>
-                <p>燃值可用于在中国大陆地区兑换产品/电子礼券/指定服务/指定活动抽奖机会，直接前往微信小程序“迪卡侬会员小程序”使用你的燃值吧！</p>
+                <div class="strategy-left">2</div>
+                <div class="strategy-right">
+                  <h4>如何使用燃值？</h4>
+                  <p>燃值可用于在中国大陆地区兑换产品/电子礼券/指定服务/指定活动抽奖机会，直接前往微信小程序“迪卡侬会员小程序”使用你的燃值吧！</p>
+                </div>
               </li>
               <li>
-                <h4>燃值有效期</h4>
-                <p>当年获得的燃值将在次年年底过期(例如2023年获得的燃值将在2024年12月31日24:00过期)</p>
+                <div class="strategy-left">3</div>
+                <div class="strategy-right">
+                  <h4>燃值有效期</h4>
+                  <p>当年获得的燃值将在次年年底过期(例如2023年获得的燃值将在2024年12月31日24:00过期)</p>
+                </div>
               </li>
               <li>
-                <h4>怎么获得燃值</h4>
-                <p>会员积极和迪卡侬互动，在迪卡侬消费，评价自己的订单都能获得燃值噢，还有更多隐藏攻略，等你来探索！</p>
+                <div class="strategy-left">4</div>
+                <div class="strategy-right">
+                  <h4>怎么获得燃值</h4>
+                  <p>会员积极和迪卡侬互动，在迪卡侬消费，评价自己的订单都能获得燃值噢，还有更多隐藏攻略，等你来探索！</p>
+                </div>
               </li>
               <li>
-                <h4>关注迪卡侬获得更多信息</h4>
-                <p>搜索微信公众号“Decathlon迪卡侬”并关注，搜索微信小程序“迪卡侬会员俱乐部”发现更多燃值相关活动，快来参与吧！</p>
+                <div class="strategy-left">5</div>
+                <div class="strategy-right">
+                  <h4>关注迪卡侬获得更多信息</h4>
+                  <p>搜索微信公众号“Decathlon迪卡侬”并关注，搜索微信小程序“迪卡侬会员俱乐部”发现更多燃值相关活动，快来参与吧！</p>
+                </div>
               </li>
             </ol>
           </div>
         </div>
       </div>
     </section>
-
   </div>
 
+  <!-- 回到顶部 -->
+  <div class="back-to-top">
+    <img src="img/back-to-top.png" alt="back-to-top">
+  </div>
   <!-- 底部部分 -->
   <section class="footer-section">
     <div class="footer-main">

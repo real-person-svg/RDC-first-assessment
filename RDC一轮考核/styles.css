@@ -3,6 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Decathlon;
+}
+
+@font-face {
+  font-family: 'Decathlon';
+  src: url('DECATHLON-Medium.bca66ef.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
@@ -31,13 +39,15 @@ header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-}
-
-.header-container {
-  margin: 0 auto;
-  max-width: 1300px;
   display: flex;
   justify-content: space-between;
+}
+
+
+.header-left-container,
+.header-right-container {
+  display: flex;
+  justify-content: space-around;
   gap: 20px;
   align-items: center;
 }
@@ -46,21 +56,37 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 10px;
 }
 
 .logo {
-  height: 40px;
+  height: 30px;
 }
 
-nav {
+.header-nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+.showbar {
+  margin-top: 5px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+}
+
+.showitem {
+  visibility: hidden;
+  width: 14%;
+  height: 100%;
+  background-color: #3b43ac;
+  transition: all 0.3s ease;
+}
+
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 35px;
 }
 
 .nav-links li {
@@ -69,27 +95,9 @@ nav {
   transition: all 0.3s ease;
 }
 
-.nav-links li::after {
-  content: "";
-  display: block;
-  width: 0;
-  margin-top: 10px;
-  height: 2px;
-  background-color: #3943b3;
-  transition: width 0.3s ease;
-}
-
-.nav-links li:hover::after {
-  width: 100%;
-}
-
-.nav-links li:hover a {
-  color: #3943b3;
-}
-
 .nav-links a {
   color: #000;
-  font-size: 16px;
+  font-size: 15px;
   white-space: nowrap;
 }
 
@@ -111,6 +119,7 @@ nav {
 .search-icon {
   font-size: 20px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .header-actions {
@@ -128,15 +137,15 @@ nav {
 }
 
 .banner {
-  margin-top: 84px;
+  margin-top: 90px;
   background-color: #fff;
 }
 
 .banner-container {
   margin: 0 auto;
-  max-width: 1300px;
-  height: 500px;
-  background-image: url('img/index/lunbo11.jpg'); 
+  max-width: 1520px;
+  height: 630px;
+  background-image: url('img/index/lunbo11.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -170,18 +179,43 @@ nav {
   z-index: 2;
 }
 
+.slider-show {
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 5px;
+  display: flex;
+}
+
+.show-highlight {
+  flex: 1;
+  cursor: pointer;
+}
+
+.show-highlight:hover {
+  background-color: #fff;
+}
+
+.show-highlight.active {
+  background-color: #fff;
+}
+
 .slider-prev,
 .slider-next {
-  color: white;
+  color: #333;
   text-decoration: none;
   font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   padding: 10px 15px;
   border-radius: 50%;
 }
 
 .sports-section {
-  margin-top: 70px;
+  margin-top: 120px;
   background-color: #fff;
 }
 
@@ -192,22 +226,25 @@ nav {
 }
 
 .sports-main h2 {
+  font-size: 40px;
   text-align: left;
 }
 
 .section-title {
-  margin-bottom: 20px;
-  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  font-size: 40px;
 }
 
 .sports-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px 70px;
+  gap: 40px 70px;
 }
 
 .check-all-sport-item,
 .sport-item {
+  position: relative;
   background-color: #f4f4f4;
   padding: 0 10px 0 10px;
   display: flex;
@@ -222,13 +259,17 @@ nav {
   transition: all 0.3s ease;
 }
 
-.sport-item:hover img{
-  transform: skew(5deg) translateX(15px);
+.sport-item:hover img {
+  transform: skew(5deg) translateX(5px);
 }
 
 .sport-item img {
-  width: 70px;
-  height: auto;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: auto;
+  height: 110px;
+  z-index: 2;
   margin-right: 20px;
   margin-bottom: 10px;
   transform: skew(5deg);
@@ -236,8 +277,9 @@ nav {
 }
 
 .sport-item p {
+  padding: 25px;
   font-size: 18px;
-  transform: skew(5deg);
+  transform: skew(5deg) translateX(90px);
 }
 
 .view-all-link {
@@ -257,18 +299,13 @@ nav {
 
 /* 关于迪卡侬部分 */
 .decathlon-about {
-  margin-top: 70px;
+  margin-top: 120px;
   background-color: #fff;
 }
 
 .about-main {
   margin: 0 auto;
   max-width: 1300px;
-}
-
-.section-title {
-  margin-bottom: 20px;
-  font-size: 28px;
 }
 
 .about-container {
@@ -302,7 +339,7 @@ nav {
 
 /* 当季品类部分 */
 .current-season {
-  margin-top: 70px;
+  margin-top: 120px;
   background-color: #fff;
 }
 
@@ -319,8 +356,10 @@ nav {
 }
 
 .current-section-title {
-  font-size: 24px;
-  transform: translateY(-5px);
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  transform: translateY(20px);
 }
 
 .current-category-nav {
@@ -352,6 +391,8 @@ nav {
 }
 
 .current-banner {
+  transform: translateX(-120px);
+  width: 1530px;
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
@@ -397,10 +438,12 @@ nav {
 }
 
 .product-slider {
+  width: 1500px;
+  height: 400px;
   position: relative;
   padding: 0 80px;
   overflow: hidden;
-  transform: translateY(-100px);
+  transform: translateY(-150px) translateX(-90px);
   z-index: 100;
 }
 
@@ -409,47 +452,87 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
-  font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.3);
+  color: #666;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   padding: 10px 15px;
   border-radius: 50%;
 }
 
 .current-slider-prev {
-  left: 10px;
+  left: 60px;
+  z-index: 10;
 }
 
 .current-slider-next {
-  right: 10px;
+  right: 80px;
+  z-index: 10;
 }
 
 .slider-container {
   width: 100%;
   display: flex;
-  gap: 20px;
   padding-top: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .product-item {
-  width: 210px;
-  text-align: center;
+  width: 250px;
+  text-align: left;
   cursor: pointer;
+  margin: 0 10px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  padding: 2px;
   transition: all 0.3s ease;
   position: relative;
 }
 
-.product-item:hover {
-  transform: translateY(-10px);
+.sale-product-item {
+  width: 210px;
+  text-align: left;
+  cursor: pointer;
+  margin: 0 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  padding: 2px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .current-item {
+  background-color: #fff;
+  position: relative;
   flex: 0 0 calc(20% - 20px);
-  text-align: center;
+  margin: 0 10px;
+  text-align: left;
   cursor: pointer;
+  border: 1px solid transparent;
+  padding: 2px;
   transition: all 0.3s ease;
+}
+
+.sale-product-item:hover,
+.product-item:hover,
+.current-item:hover {
+  border: 1px solid #dadde1;
+}
+
+.shopping-car {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+}
+
+.sale-product-item:hover .shopping-car,
+.product-item:hover .shopping-car,
+.current-item:hover .shopping-car {
+  display: block;
 }
 
 .product-img {
@@ -459,13 +542,15 @@ nav {
 }
 
 .product-name {
+  height: 60px;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 .product-price {
+  height: 50px;
   font-size: 14px;
-  color: #999;
+  color: #333;
 }
 
 /* 侬说搭配部分 */
@@ -492,7 +577,8 @@ nav {
 }
 
 .match-title {
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 
@@ -502,6 +588,7 @@ nav {
 
 .match-text h3 {
   font-size: 40px;
+  font-weight: 400;
 }
 
 .match-nav {
@@ -554,9 +641,9 @@ nav {
 .match-product-slider {
   position: relative;
   overflow: hidden;
-  width: 65%;
+  width: 75%;
   padding: 0 100px;
-  transform: translateY(-200px);
+  transform: translateY(-200px) translateX(-100px);
   z-index: 100;
 }
 
@@ -565,20 +652,23 @@ nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
+  color: #999;
   text-decoration: none;
-  font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   padding: 10px 15px;
   border-radius: 50%;
 }
 
 .match-slider-prev {
-  left: 10px;
+  left: 90px;
+  z-index: 10;
 }
 
 .match-slider-next {
-  right: 10px;
+  right: 90px;
+  z-index: 10;
 }
 
 /* 侬粉热搜部分 */
@@ -794,18 +884,29 @@ nav {
   gap: 20px 60px;
 }
 
+.sale-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px 0;
+}
+
 .original-price {
+  font-size: 10px;
+  color: #999;
   text-decoration: line-through;
-  font-size: 12px;
 }
 
 .discount {
+  position: absolute;
+  left: 60px;
+  bottom: 55px;
   display: block;
   float: right;
-  padding: 5px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #ff0000;
+  padding: 3px 5px;
+  font-size: 8px;
+  color: #101010;
+  background-color: #f7cf65;
 }
 
 /* 产品召回部分 */
@@ -1084,7 +1185,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-.benefits-banner:hover .benefits-banner-text{
+.benefits-banner:hover .benefits-banner-text {
   top: 0;
 }
 
@@ -1159,13 +1260,14 @@ nav {
 
 .fire-worth-main {
   margin: 0 auto;
-  max-width: 1300px;
-  padding: 50px 0; 
+  max-width: 1400px;
+  padding: 50px 0;
 }
 
 .fire-worth-main h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: 400;
   margin-bottom: 50px;
 }
 
@@ -1176,7 +1278,7 @@ nav {
 }
 
 .fire-worth-item {
-  width: 18%;
+  width: 19%;
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -1185,7 +1287,7 @@ nav {
 }
 
 .fire-worth-item:hover {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .fire-worth-item i {
@@ -1194,12 +1296,14 @@ nav {
 }
 
 .fire-worth-item h3 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 15px 0;
 }
 
 .fire-worth-item p {
-  font-size: 13px;
+  font-size: 400;
+  font-size: 16px;
   color: #333;
 }
 
@@ -1217,20 +1321,28 @@ nav {
 }
 
 .strategy-main {
- margin: 0 auto;
+  margin: 0 auto;
   max-width: 1300px;
 }
 
 .strategy-main h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: 400;
   margin-bottom: 20px;
+}
+
+.strategy-left {
+  font-size: 50px;
+  margin-right: 20px;
 }
 
 .subtitle {
   text-align: center;
   color: #333;
-  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 70px;
 }
 
 .strategy-container {
@@ -1252,8 +1364,10 @@ nav {
 }
 
 .strategy-text h3 {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #666;
 }
 
 .strategy-text ol {
@@ -1264,7 +1378,8 @@ nav {
 }
 
 .strategy-text li {
-  list-style: decimal;
+  list-style: none;
+  display: flex;
 }
 
 .strategy-text h4 {
@@ -1274,7 +1389,7 @@ nav {
 
 .strategy-text p {
   line-height: 1.6;
-  color: #333;
+  color: #666;
 }
 
 /* 登录部分 */
@@ -1440,4 +1555,20 @@ form button {
 
 .tag:hover {
   background-color: #e0e0e0;
+}
+
+.back-to-top {
+  visibility: hidden;
+  position: fixed;
+  bottom: 60px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-top img {
+  width: 100%;
 }
