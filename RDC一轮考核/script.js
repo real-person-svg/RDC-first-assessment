@@ -4,8 +4,6 @@ const memberLink = document.querySelector('.nav-links li:last-child a');
 const indexSection = document.querySelector('.index');
 const memberSection = document.querySelector('.menber');
 
-// ... existing code ...
-
 // 获取 nav-links 中的所有 li 元素和 showitem 元素
 const navLinks = document.querySelectorAll('.nav-links li');
 const showItembox = document.querySelector('.showitem');
@@ -16,11 +14,10 @@ showItembox.style.transition = 'all 0.3s ease';
 // 为每个 li 元素添加鼠标进入和鼠标离开事件监听器
 navLinks.forEach((link) => {
   link.addEventListener('mouseenter', () => {
-    // 计算当前 li 元素的位置和宽度
+    // 计算当前 li 元素的位置
     const rect = link.getBoundingClientRect();
     const navRect = document.querySelector('.header-nav').getBoundingClientRect();
     const left = rect.left - navRect.left;
-    const width = rect.width;
 
     // 设置 showitem 的位置
     showItembox.style.transform = `translateX(${left}px)`;
@@ -32,8 +29,6 @@ navLinks.forEach((link) => {
     showItembox.style.visibility = 'hidden';
   });
 });
-
-// ... existing code ...
 
 // 初始化状态
 memberSection.style.display = 'none';
@@ -73,6 +68,7 @@ const cancelButton = document.querySelector('.cancel-button');
 function open(index, direction, result) {
   index.addEventListener('click', function (e) {
     e.preventDefault();
+    // 这里direction用中括号是因为direction的值不是固定的，需要动态变化
     result.style[direction] = '0';
     darkOverlay.style.display = 'block';
   });
@@ -110,9 +106,10 @@ const backgroundImages = [
 
 // 轮播图
 const bannerContainer = document.querySelector('.banner-container');
-const bannerPrev = document.querySelector('.banner-prev');
-const bannerNext = document.querySelector('.banner-next');
+const sliderPrev = document.querySelector('.slider-prev');
+const sliderNext = document.querySelector('.slider-next');
 const showHighlights = document.querySelectorAll('.show-highlight');
+
 let currentIndex = 0;
 
 // 初始化轮播图
@@ -129,13 +126,13 @@ function updateBanner() {
 }
 
 // 上一张
-bannerPrev.addEventListener('click', () => {
+sliderPrev.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + backgroundImages.length) % backgroundImages.length;
   updateBanner();
 });
 
 // 下一张
-bannerNext.addEventListener('click', () => {
+sliderNext.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % backgroundImages.length;
   updateBanner();
 });
@@ -148,7 +145,7 @@ showHighlights.forEach((light, index) => {
 })
 
 // 自动轮播
-autoPlayInterval = setInterval(() => {
+let autoPlayInterval = setInterval(() => {
   currentIndex = (currentIndex + 1) % backgroundImages.length;
   updateBanner();
 }, 3000);
@@ -205,6 +202,8 @@ showItem(0);
 
 const backToTop = document.querySelector('.back-to-top');
 
+
+//控制返回顶部是否出现
 window.addEventListener('scroll', () => {
   if (window.scrollY > 900) {
     backToTop.style.visibility = 'visible';
